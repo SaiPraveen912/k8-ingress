@@ -45,7 +45,7 @@ metadata:
     alb.ingress.kubernetes.io/tags: Environment=dev,Team=test
     alb.ingress.kubernetes.io/group.name: saipraveen91
 spec:
-  spec.ingressClassName: alb
+  ingressClassName: alb
   rules:
   - host: "app1.daws-78s.cloud" # ALB rule
     http:
