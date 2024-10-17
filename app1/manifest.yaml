@@ -39,6 +39,11 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-wildcard-host
+  annotations: # Gives power to create ALB using annotations
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/tags: Environment=dev,Team=test
+    alb.ingress.kubernetes.io/group.name: saipraveen91
 spec:
   rules:
   - host: "app1.daws-78s.cloud" # ALB rule
